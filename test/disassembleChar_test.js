@@ -1,4 +1,4 @@
-import { disassembleChar } from '../src/char'
+import disassembleChar from '../src/character/disassembleChar'
 
 describe('disassembleChar()', () => {
   it('should handle HYPUA', () => {
