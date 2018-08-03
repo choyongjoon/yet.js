@@ -35,7 +35,7 @@ export const match = (a, b) => {
       if (b[i] === '*') continue
       let willContinue = false
       for (let j = 0; j < b[i].length; j++) {
-        if (matchJamo(a[i], b[i][j])) {
+        if (matchJamo(a[i], b[i][j], i)) {
           willContinue = true
           break
         }
@@ -50,15 +50,14 @@ export const match = (a, b) => {
   return false
 }
 
-const matchJamo = (a, b) => {
-  const ac = a.charCodeAt(0)
-  const bc = b.charCodeAt(0)
+const matchJamo = (a, b, i) => {
+  let ac = a.charCodeAt(0)
+  let bc = b.charCodeAt(0)
   const ar = compatibilityTable[ac]
   const br = compatibilityTable[bc]
-
-  if (ar && !br) return ar.includes(bc)
-  else if (!ar && br) return br.includes(ac)
-  return a === b
+  if (ar) ac = ar[i]
+  if (br) bc = br[i]
+  return ac === bc
 }
 
 const convertHYPUAtoIPF = c => {
