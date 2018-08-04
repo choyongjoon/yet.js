@@ -1,8 +1,28 @@
 {
   "name": "yet",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Library for analysis of old Korean documents",
+  "keywords": [
+    "Korean",
+    "한글",
+    "옛한글",
+    "disassemble",
+    "search"
+  ],
+  "homepage": "https://github.com/choyongjoon/yet#readme",
+  "bugs": {
+    "url": "https://github.com/choyongjoon/yet/issues"
+  },
   "license": "MIT",
+  "author": "choyongjoon",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choyongjoon/yet.git"
+  },
   "scripts": {
     "build": "neutrino build",
     "lint": "neutrino lint",
