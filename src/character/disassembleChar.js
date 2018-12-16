@@ -10,7 +10,7 @@ const disassembleChar = c => {
   const code = c.charCodeAt(0)
   const index = code - ModernRange.complete[0]
   const endIndex = index % 28
-  const middleIndex = (index - endIndex) / 28 % 21
+  const middleIndex = ((index - endIndex) / 28) % 21
   const startIndex = parseInt((index - endIndex) / 28 / 21)
   const start = CompleteTable.start[startIndex]
   const middle = CompleteTable.middle[middleIndex]
