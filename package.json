@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "author": "choyongjoon",
-  "main": "index.js",
+  "main": "src/index.js",
   "directories": {
     "test": "test"
   },
@@ -24,7 +24,6 @@
     "url": "git+https://github.com/choyongjoon/yet.js.git"
   },
   "scripts": {
-    "build": "neutrino build",
     "lint": "neutrino lint",
     "test": "neutrino test"
   },
