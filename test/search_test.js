@@ -1,4 +1,4 @@
-import { search, searchAndPrint } from '../src'
+import { search } from '../src'
 
 describe('search()', () => {
   it('should be sane', () => {
@@ -16,19 +16,5 @@ describe('search()', () => {
       const result = terms[term]
       expect(search(input, term).map(x => x.index)).toEqual(result)
     }
-  })
-})
-
-describe('searchAndPrint()', () => {
-  it('should be sane', () => {
-    const input = '擬要也, 마 그리 호려 다, 又欲也, 待賣幾箇馬去 여러  오져 야 가노라'
-    const term = '[ㅎ/ᆞ]'
-    const results = [
-      '擬要也, ****마 그리 호려 다',
-      ' 마 그리 호려 ****다, 又欲也, 待賣',
-      '여러  오져 ****야 가노라'
-    ]
-
-    expect(searchAndPrint(input, term)).toEqual(results)
   })
 })
